@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Técnica - Seguridad Rural</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2A5C82;
+            --accent-green: #3D8B6F;
+            --soft-blue: #E3F2FD;
+            --white: #ffffff;
+            --text-main: #2c3e50;
+            --shape-bg: #f0f7ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--white);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Formas Orgánicas de Fondo */
+        .blob-bg {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--soft-blue);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero / Header */
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f1f8 100%);
+            border-radius: 0 0 80px 80px;
+            margin-bottom: 50px;
+        }
+
+        .header-badge {
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 2.8em; color: var(--primary-blue); margin: 10px 0; }
+        
+        /* Tarjetas de Información */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(42, 92, 130, 0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--soft-blue);
+            color: var(--primary-blue);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Tabla Detallada Modernizada */
+        .table-container {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--soft-blue);
+            font-weight: 600;
+        }
+
+        td { padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 0.95em; }
+
+        .category-row {
+            background: var(--shape-bg);
+            font-weight: bold;
+            color: var(--accent-green);
+        }
+
+        .total-box {
+            background: var(--primary-blue);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        /* Etiquetas de Imágenes */
+        .image-labels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .label-card {
+            background: var(--white);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .label-img-area {
+            width: 100%;
+            height: 220px;
+            background: #eef2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #b0bfc6;
+            border-bottom: 4px solid var(--accent-green);
+        }
+
+        .label-content { padding: 20px; }
+        .label-content h4 { margin: 0 0 10px 0; color: var(--primary-blue); }
+        .label-content p { font-size: 0.85em; color: #666; margin: 0; }
+
+    </style>
+</head>
+<body>
+
+<div class="blob-bg" style="top: 10%; right: -10%;"></div>
+<div class="blob-bg" style="top: 50%; left: -10%; background: #e8f5e9;"></div>
+
+<header>
+    <div class="header-badge">SISTEMA RURAL 2026</div>
+    <h1>Propuesta Técnica y Económica</h1>
+    <p style="color: #555;">Seguridad Electrónica y Conectividad Rural Integral</p>
+    <div style="margin-top: 20px; font-weight: 500; color: var(--primary-blue);">
+        Villavicencio, Meta | Responsable: Lucas Orlando Molina Parra
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2>1. RESUMEN EJECUTIVO DEL PROYECTO</h2>
+            <p> La presente propuesta detalla la implementación de un ecosistema de seguridad híbrido diseñado para optimizar la vigilancia en áreas administrativas y puntos de acceso remotos (porterías). El núcleo del proyecto se basa en una arquitectura de red inalámbrica de alta velocidad y un centro de gestión organizado que permite no solo la seguridad, sino la extensión de servicios de internet Wi-Fi en zonas rurales libres de interferencias.</p>
+        </div>
+    </section>	
+    
+    <section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2>2. ESPECIFICACIONES DE VIDEO Y ALMACENAMIENTO</h2>
+            <p> El sistema central de grabación consiste en un DVR de 8 canales Turbo HD con tecnología de compresión H.265+. Este equipo está equipado con un Disco Duro de 4TB WD Purple, diseñado específicamente para soportar escritura constante de video 24/7 sin degradación. El sistema visual se compone de:
+</p>
+<p> •	Vigilancia Administrativa: Cuatro (4) cámaras Turbo 1080P Turret para interiores.
+</p>
+<p> •	Seguridad Perimetral: Cuatro (4) cámaras IP de 2MP tipo Bala con protección IP67 para exteriores.
+</p>
+        </div>
+    </section>
+
+
+
+
+        <section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2>3. INFRAESTRUCTURA DE CONECTIVIDAD (AHORRO INTELIGENTE)</h2>
+            <p>Para garantizar la máxima fluidez del video y datos, se ha diseñado una red Gigabit Ethernet robusta:</p>
+	    <p>
+•	Núcleo de Red: Se utilizará un Switch Ruijie de 8 puertos Gigabit en el nodo central. Esta configuración permite conectar las antenas transmisoras, el DVR, el router de internet y deja tres puertos libres para futuras expansiones (como alarmas o más cámaras IP) sin necesidad de inversión adicional en hardware.
+</p>
+	    <p>
+•	Enlace Inalámbrico Rural: Dos (2) kits de antenas Punto a Punto que operan en 2.4GHz con alcance de hasta 500 metros. Esta frecuencia es ideal para la zona rural de Villavicencio por su estabilidad y capacidad de cobertura
+</p>
+            <p>
+•	Valor Agregado Wi-Fi: Se incluyen dos (2) Routers Wi-Fi de 300 Mbps para ser ubicados en las porterías, permitiendo ampliar la cobertura de internet en la finca para uso del personal o dispositivos móviles.
+</p>
+
+</div>
+    </section>
+
+		
+<section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2>4. ESTRATEGIA DE CABLEADO Y PROTECCIÓN</h2>
+            <p> Para equilibrar calidad y costo, se implementará una técnica de cableado segmentado: </p>
+<p>•	Cableado Troncal Crítico: Uso de UTP Categoría 6 (100% Cobre) para las antenas del punto central para asegurar la integridad de la señal. </p>
+<p>•	Cableado de Alimentación y Bajada: Uso de UTP Categoría 5e (100% Cobre) para las antenas en las porterías. </p>
+<p>•	Cableado Final: Uso de cableado de aleación para conexiones internas de corta distancia. </p>
+<p>•	Protección Física: Los equipos centrales se resguardan en un Gabinete Vertical de Pared Mini Baby, mientras que el grabador cuenta con su propio gabinete dedicado de 5 unidades. </p>
+        </div>
+    </section>
+
+<section>
+    <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff); padding: 30px;">
+        <h2>5. PASO A PASO DETALLADO DE LA EJECUCIÓN TÉCNICA</h2>
+        
+        <h3 style="color: var(--primary-blue); margin-top: 25px;">Fase 1: Implementación del Nodo Central (Administración)</h3>
+        <p>• <strong>Montaje y Aseguramiento Físico:</strong> Se realiza la fijación del gabinete cuadrado (Gabinete para DVR de 5 unidades) en el punto central de administración para alojar el grabador y el disco duro de 4TB.</p>
+        <p>• <strong>Centralización de Red:</strong> En este mismo punto se instala uno de los gabinetes verticales de pared para proteger el Switch Ruijie de 8 puertos y la multitoma regleta de 6 unidades.</p>
+        <p>• <strong>Conectividad Troncal:</strong> Se instalan los cables UTP Categoría 6 (100% Cobre) desde el switch hacia las dos antenas transmisoras para asegurar la máxima integridad de la señal de datos.</p>
+        <p>• <strong>Organización de Puertos del Switch:</strong> Se ejecuta un esquema de conexión ordenado: los puertos 1 y 2 se destinan a las antenas; el puerto 3 al DVR mediante un Patch Cord; el puerto 4 se enlaza al Router de Internet; y el puerto 5 a la PC de administración.</p>
+        <p>• <strong>Gestión de Energía y Etiquetado:</strong> Se utiliza la multitoma para alimentar el DVR y el switch, marcando cada cable (ej. "Antena Norte", "Antena Sur") con etiquetas profesionales para facilitar diagnósticos rápidos.</p>
+
+        <h3 style="color: var(--primary-blue); margin-top: 25px;">Fase 2: Despliegue del Enlace Inalámbrico Rural</h3>
+        <p>• <strong>Instalación de Mástiles y Antenas:</strong> Se fijan los brazos de soporte de 1 metro para ubicar las 4 antenas (2 transmisoras y 2 receptoras) utilizando el kit Punto a Punto de 2.4GHz.</p>
+        <p>• <strong>Alineación y Calibración:</strong> Se realiza una alineación visual y técnica de las antenas para maximizar el ancho de banda de 300Mbps, garantizando que el video y el internet fluyan con latencia cero.</p>
+        <p>• <strong>Protección del Enlace:</strong> Se baja la señal desde las antenas en las porterías utilizando cable UTP Categoría 5e (100% Cobre), asegurando una alimentación PoE estable y libre de caídas de voltaje.</p>
+
+        <h3 style="color: var(--primary-blue); margin-top: 25px;">Fase 3: Nodos Inteligentes en Porterías</h3>
+        <p>• <strong>Infraestructura en Porterías:</strong> Se instala el segundo gabinete vertical de pared en la portería principal para proteger el switch local y los accesorios de conexión.</p>
+        <p>• <strong>Instalación de Puntos de Cámara:</strong> Se montan las cámaras IP de 2MP en las porterías y las cámaras Turret en las oficinas, utilizando Cajas de Paso 10x10 para proteger las borneras y fuentes de poder.</p>
+        <p>• <strong>Habilitación de Servicios Wi-Fi y Gestión de Red:</strong> Se instalan los Routers Wi-Fi de 2.4GHz en cada portería, los cuales reciben la señal de datos directamente de la antena Punto a Punto y están configurados para operar simultáneamente como Switch y Repetidor. Esta configuración técnica permite que el equipo distribuya la señal por cable a las cámaras de seguridad y, al mismo tiempo, cree una zona de cobertura inalámbrica activa para uso personal y dispositivos de domótica en la finca.</p>
+        <p>• <strong>Pruebas de Integración y Software:</strong> Se configura el DVR para reconocer las cámaras IP a través de la red inalámbrica, verificando la visualización fluida y activando el acceso remoto por aplicación móvil.</p>
+    </div>
+</section>
+
+
+
+<section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2> 6. VENTAJAS DE LA TECNOLOGÍA PROPUESTA </h2>
+            <p> •	Escalabilidad: El switch de 8 puertos permite agregar más servicios en el futuro (como cerraduras eléctricas remotas o sensores de intrusión) sin cambiar la base del sistema. </p>
+<p> •	Eficiencia Rural: La banda de 2.4GHz en campo abierto ofrece una penetración de señal superior y estabilidad frente a pequeños obstáculos naturales.</p>
+<p> •	Gestión en la Nube: La infraestructura permite, si el proveedor lo soporta, la administración remota de la red para diagnósticos rápidos sin necesidad de desplazamientos.</p>
+        </div>
+    </section>
+
+<section>
+        <div class="card" style="border-radius: 40px; background: linear-gradient(to right, #ffffff, #f0f7ff);">
+            <h2> 7. INVERSIÓN TOTAL DEL PROYECTO</h2>
+            <p> El valor total de la inversión, que incluye todos los equipos de grabación, red inalámbrica, accesorios de instalación (fuentes, cajas de paso, cableado) y servicios profesionales de configuración es de CUATRO MILLONES CUATROCIENTOS NOVENTA Y TRES MIL NOVECIENTOS TREINTA Y CUATRO PESOS ($ 4.493.934). </p>
+        </div>
+    </section>
+
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="icon-circle"><i class="fas fa-video"></i></div>
+            <h3>Video y Grabación</h3>
+            <p>Sistema Turbo HD con 8 canales y cámaras IP perimetrales de 2MP con protección IP67 para exteriores.</p>
+        </div>
+        <div class="card">
+            <div class="icon-circle"><i class="fas fa-wifi"></i></div>
+            <h3>Conectividad Rural</h3>
+            <p>Enlace inalámbrico Punto a Punto de 500m en frecuencia 2.4GHz, ideal para estabilidad en campo abierto.</p>
+        </div>
+        <div class="card">
+            <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+            <h3>Gestión y Valor</h3>
+            <p>Infraestructura escalable con Switch Gigabit y routers adicionales para cobertura de internet en porterías.</p>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 80px;">Componentes Destacados</h2>
+    
+<div class="image-labels">
+    <div class="label-card">
+        <div class="label-img-area" style="background: #fff; display: flex; align-items: center; justify-content: center; height: 220px; overflow: hidden;">
+            <img src="https://ftp3.syscom.mx/usuarios/fotos/BancoFotografiasSyscom/HIKVISION/DS2CD2021G1I(C)/DS2CD2021G1I(C)-LIST-p.PNG" 
+                 alt="Cámara Hikvision" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+        </div>
+        <div class="label-content">
+            <h4>Cámaras de Seguridad</h4>
+            <p>CAMARA IP 2MP BALA H265+ DWDR D/N F2.8 IR30m IP67 SEMIMETAL HIKVISION</p>
+        </div>
+    </div>
+
+
+        <div class="label-card">
+            <div class="label-img-area">
+                <img src="https://ftp3.syscom.mx/usuarios/fotos/BancoFotografiasSyscom/RUIJIE/RGEST100E/RGEST100E-p.PNG" 
+                 alt="Cámara Hikvision" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            </div>
+            <div class="label-content">
+                <h4>Antenas de Enlace</h4>
+                <p>Kit P2P para conexión inalámbrica entre administración y portería.</p>
+            </div>
+        </div>
+
+<div class="label-card">
+            <div class="label-img-area">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_826299-MCO92665992123_092025-F.webp" 
+                 alt="Sistema de Grabación Digital Hikvision Turbo HD G6 – 8 Canales" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            </div>
+            <div class="label-content">
+                <h4>Sistema de Grabación Digital Hikvision Turbo HD G6 – 8 Canales</h4>
+                <p>Descripción: Grabador profesional con compresión H.265+ para optimizar el almacenamiento en el disco de 4TB. Soporta video fluido a 15 FPS, salidas HDMI/VGA y acceso remoto móvil.</p>
+            </div>
+        </div>
+
+ <div class="label-card">
+            <div class="label-img-area">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_976436-MCO80127116276_112024-F.webp" 
+                 alt="Cámara Hikvision" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            </div>
+            <div class="label-content">
+                <h4>Camara interior</h4>
+                <p>CAMARA TURBO 1080P TURRET 0.01LUX IR20m INT PLASTICA HIKVISION 
+PLASTICO HIKVISION(Interior)</p>
+            </div>
+        </div>
+
+
+ <div class="label-card">
+            <div class="label-img-area">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_899047-MCO77462087448_072024-F.webp" 
+                 alt="Cámara Hikvision" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            </div>
+            <div class="label-content">
+                <h4>Almacenamiento de video</h4>
+                <p>DISCO 4 TERAS WESTER PURPURA</p>
+            </div>
+        </div>
+
+        <div class="label-card">
+            <div class="label-img-area">
+                <img src="https://ftp3.syscom.mx/usuarios/fotos/BancoFotografiasSyscom/RUIJIE/RGES08/RGES08-p.PNG" 
+                 alt="Cámara Hikvision" 
+                 style="max-width: 90%; max-height: 90%; object-fit: contain;">
+
+            </div>
+            <div class="label-content">
+                <h4>Centro de Control</h4>
+                <p>Gabinete de pared con Switch Gigabit y DVR de alta capacidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Detalle Económico del Proyecto</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descripción Técnica</th>
+                        <th>Cant.</th>
+                        <th>Valor Unit.</th>
+                        <th>Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-row"><td colspan="5">1.0 EQUIPOS DE VIDEO Y GRABACIÓN</td></tr>
+                    <tr><td>1.1</td><td>CAMARA IP 2MP BALA H265+ HIKVISION</td><td>4</td><td>$ 225.103</td><td>$ 900.412</td></tr>
+                    <tr><td>1.2</td><td>CAMARA TURBO 1080P TURRET (Interior)</td><td>4</td><td>$ 72.112</td><td>$ 288.451</td></tr>
+                    <tr><td>1.3</td><td>DVR 8CH TURBO 1080P LITE 4TB</td><td>1</td><td>$ 266.670</td><td>$ 266.670</td></tr>
+                    <tr><td>1.4</td><td>Disco Duro 4TB WD Purple (CCTV)</td><td>1</td><td>$ 554.400</td><td>$ 554.400</td></tr>
+                    
+                    <tr class="category-row"><td colspan="5">2.0 RED Y CONECTIVIDAD</td></tr>
+                    <tr><td>2.1</td><td>Antena P2P (Kit x2 antenas 500m)</td><td>2</td><td>$ 240.000</td><td>$ 480.000</td></tr>
+                    <tr><td>2.2</td><td>SWITCH 8 PUERTOS 1Gbps RUIJIE</td><td>1</td><td>$ 96.000</td><td>$ 96.000</td></tr>
+                    <tr><td>2.3</td><td>ROUTER Wi-Fi 2.4 GHz</td><td>2</td><td>$ 72.000</td><td>$ 144.000</td></tr>
+
+		    <tr class="category-row"><td colspan="5">3.0 ACCESORIOS DE INSTALACIÓN</td></tr>
+<tr><td>3.1</td><td>Video Balun HD 2MPX (Parejas)</td><td>4</td><td>$ 7.200</td><td>$ 28.800</td></tr>
+<tr><td>3.2</td><td>Fuente de Poder 12V - 2 Amp</td><td>8</td><td>$ 6.000</td><td>$ 48.000</td></tr>
+<tr><td>3.3</td><td>Caja de Paso 10x10 (Protección de borneras)</td><td>8</td><td>$ 4.800</td><td>$ 38.400</td></tr>
+<tr><td>3.4</td><td>MULTITOMA REGLETA 6 UNIDADES</td><td>3</td><td>$ 14.400</td><td>$ 43.200</td></tr>
+<tr><td>3.5</td><td>Enchufe Hembra (Para conexión eléctrica interna)</td><td>4</td><td>$ 2.400</td><td>$ 9.600</td></tr>
+<tr><td>3.6</td><td>CABLE NEOPREN ALEACION *200M</td><td>1</td><td>$ 92.400</td><td>$ 92.400</td></tr>
+<tr><td>3.7</td><td>Bobina Cable UTP Cat 6 (100 metros)</td><td>1</td><td>$ 84.000</td><td>$ 84.000</td></tr>
+<tr><td>3.8</td><td>Canaleta Plástica 20x12 (Tramo 2 metros)</td><td>10</td><td>$ 6.000</td><td>$ 60.000</td></tr>
+<tr><td>3.9</td><td>GABINETE VERTICAL DE PARED MINI BABY</td><td>2</td><td>$ 48.000</td><td>$ 96.000</td></tr>
+<tr><td>3.10</td><td>GABINETE PARA DVR 5 UNIDADES</td><td>1</td><td>$ 128.400</td><td>$ 128.400</td></tr>
+<tr><td>3.11</td><td>BRAZO PARA SOPORTE 1M (antenas)</td><td>3</td><td>$ 24.000</td><td>$ 72.000</td></tr>
+
+                    <tr class="category-row"><td colspan="5">4.0 SERVICIOS PROFESIONALES</td></tr>
+                    <tr><td>4.1</td><td>Instalación punto de cámaras</td><td>8</td><td>$ 110.400</td><td>$ 883.200</td></tr>
+                    <tr><td>4.2</td><td>Instalación y Alineación de Antenas</td><td>1</td><td>$ 180.000</td><td>$ 180.000</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-box">
+            <span style="display:block; font-size: 0.9em; opacity: 0.8;">Inversión Total del Proyecto</span>
+            <span style="font-size: 2.5em; font-weight: bold;">$ 4.493.934</span>
+        </div>
+    </section>
+
+</div>
+
+<footer style="background: #f8fbff; padding: 40px; text-align: center; margin-top: 50px; border-top: 1px solid #eef2f5;">
+    <p>Propuesta válida por 15 días | Villavicencio, 2026</p>
+</footer>
+
+</body>
+</html>
